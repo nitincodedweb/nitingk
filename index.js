@@ -48,23 +48,7 @@ app.post('/contact', (req, res) => {
   fs.writeFileSync('data.json', file, (err) => {
     console.log(err);
   });
-  const go = `<!DOCTYPE html>
-  <html>
   
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>app</title>
-  </head>
-  
-  <body>
-  <h1 style="text-align: center;">${name}</h1>
-  </body>
-  
-  </html>`
-  fs.writeFileSync(`file/${name}.html`,go, (err) => {
-    console.log(err);
-  });
 
   res.render('contact', { n: `${name}`, nu: `${num}`, e: `${email}` });
 });
