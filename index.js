@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'));
 app.use('/static', express.static('static'));
+app.use('/file', express.static('file'));
 app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
@@ -46,7 +47,24 @@ app.post('/contact', (req, res) => {
   const file = JSON.stringify(req.body);
   fs.writeFileSync('data.json', file, (err) => {
     console.log(err);
-  })
+  });
+  const go = `<!DOCTYPE html>
+  <html>
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>app</title>
+  </head>
+  
+  <body>
+  <h1 style="text-align: center;">${name}</h1>
+  </body>
+  
+  </html>`
+  fs.writeFileSync(`file/${name}.html`,go, (err) => {
+    console.log(err);
+  });
 
   res.render('contact', { n: `${name}`, nu: `${num}`, e: `${email}` });
 });
