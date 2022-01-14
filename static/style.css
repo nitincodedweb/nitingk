@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Qahiri&display=swap');
 *{
   margin: 0px;
   padding: 0px;
 }
-#h{
+h1{
   text-align: center;
 }
 div img{
@@ -14,4 +15,16 @@ div img{
   text-align: center;
   width: 75%;
   margin: auto;
+}
+form input,button{
+  display: block;
+  text-align: center;
+  width: 50%;
+  border: 2px solid black;
+  margin: 10px auto;
+}
+.n {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 4px;
 }
