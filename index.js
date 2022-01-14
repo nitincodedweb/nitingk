@@ -21,13 +21,10 @@ mongoose.connect(url, {
 
 const nitinSchema = new mongoose.Schema({
   name: String,
-  phone: Number,
+  num: Number,
   email: String,
-  gender: String,
-  user: String,
-  pass: String,
-  check: String,
-  test: String
+  sub: String,
+  t: String
 });
 const Nitin = new mongoose.model('Nitin', nitinSchema);
 
