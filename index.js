@@ -1,9 +1,35 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3000;
+
+const url = 'mongodb+srv://NitinN:NitinN@cluster0.svkla.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
+mongoose.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log('hello I am connected')
+  })
+  .catch((err) => {
+    console.log(`I am sorry \n ${err}`);
+  })
+
+const nitinSchema = new mongoose.Schema({
+  name: String,
+  phone: Number,
+  email: String,
+  gender: String,
+  user: String,
+  pass: String,
+  check: String,
+  test: String
+});
+const Nitin = new mongoose.model('Nitin', nitinSchema);
 
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'));
@@ -44,6 +70,12 @@ app.post('/contact', (req, res) => {
     }
 
   });
+  const ac = new Nitin(req.body)
+  ac.save((err, ac) => {
+    if (err) return console.error(err);
+    console.log(ac);
+  });
+  
   const file = JSON.stringify(req.body);
   fs.writeFileSync('data.json', file, (err) => {
     console.log(err);
@@ -62,19 +94,19 @@ app.post('/contact', (req, res) => {
   </body>
   
   </html>`
-  fs.writeFileSync(`file/${name}.html`,go, (err) => {
+  fs.writeFileSync(`file/${name}.html`, go, (err) => {
     console.log(err);
   });
 
   res.render('contact', { n: `${name}`, nu: `${num}`, e: `${email}` });
 });
 
-app.get('/app',(req, res)=>{
-  const re = fs.readFileSync('data.json',(err)=>{
+app.get('/app', (req, res) => {
+  const re = fs.readFileSync('data.json', (err) => {
     console.log(err);
   });
   const r = JSON.parse(re);
-  res.render('app', { n: r.name , nu: r.num , e: r.email,s: r.sub,te: r.t });
+  res.render('app', { n: r.name, nu: r.num, e: r.email, s: r.sub, te: r.t });
 });
 
 app.listen(port, () => {
