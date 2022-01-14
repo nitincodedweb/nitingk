@@ -67,11 +67,7 @@ app.post('/contact', (req, res) => {
     }
 
   });
-  const ac = new Nitin(req.body)
-  ac.save((err, ac) => {
-    if (err) return console.error(err);
-    console.log(ac);
-  });
+  
   
   const file = JSON.stringify(req.body);
   fs.writeFileSync('data.json', file, (err) => {
