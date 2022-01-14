@@ -16,7 +16,7 @@ div img{
   width: 75%;
   margin: auto;
 }
-form input,button{
+form input,button,textarea{
   display: block;
   text-align: center;
   width: 50%;
