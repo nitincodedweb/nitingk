@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>acount</title>
+  <link rel="stylesheet" href="/static/acount.css">
+</head>
+
+<body>
+  <h1>Account</h1>
+  <hr />
+  <div id="f">
+    <a href="/signup">sign up</a>
+    <a href="/signin">sign in</a>
+  </div>
+  <div id="n">
+    <form action="/signup" method="post" id="fo">
+      <p>if you don't have account then <br />create your acount</p> 
+      <input type="text" name="name" id="name" placeholder="enter your name " required/>
+      <input type="number" name="phone" id="phone" placeholder="enter your phone number " required/>
+      <input type="email" name="email" id="email" placeholder="enter your email" required/>
+      Enter your gender <br />
+      <div id="g">
+        <label for="gender"></label>
+        male<input type="radio" name="gender" id="gen" value="male"/>
+        female<input type="radio" name="gender" id="der" value="female"/>
+      </div>
+      <input type="text" name="user" id="user" placeholder="enter your username" required/>
+      <input type="password" name="pass" id="pass" placeholder="enter your password" required/>
+      <div id="c">
+      <input type="checkbox" id="check" name="check" value="1" checked>
+      <input type="checkbox" name="test" id="test" value="1" checked/>
+      </div>
+      <button type="submit">submit</button>
+    </form>
+  </div>
+  <footer>
+    copyright &copy; GK.com
+  </footer>
+</body>
+
+</html>

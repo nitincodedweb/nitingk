@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Qahiri&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#n{
+  background: #EF5353;
+}
+#n ul{
+  display: flex;
+  justify-content: center;
+  
+}
+#n ul li{
+  list-style: none;
+  padding: 10px 30px;
+}
+#n ul li a{
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  font-size: 1.9rem;
+  color: white;
+}
+#n ul li a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+h1{
+  font-size: 10rem;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+p{
+  margin: auto;
+  width: 70%;
+  color: black;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+@media only screen and (max-width: 400px){
+  p{
+    width: 70%;
+    font-size: 0.8rem;
+  }
+  h1{
+    font-size: 4rem;
+  }
+   #n ul li a {
+     font-size: 1rem;
+   }
+  
+   #n ul li {
+     list-style: none;
+     padding: 10px 15px;
+   }
+}

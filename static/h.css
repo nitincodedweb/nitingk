@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Qahiri&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#h {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  background: #FF5151;
+  color: white;
+  font-size: 5rem;
+  padding: 15px;
+}
+#c {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 12rem;
+}
+#span {
+  font-family: 'Island Moments', cursive;
+  text-align: center;
+  font-size: 8rem;
+}
+#p {
+  margin: 20px auto;
+  text-align: center;
+}
+#res {
+  font-family: 'Dancing Script', cursive;
+}
+#re {
+  text-align: center;
+  font-weight: bold;
+}
+#re div{
+  border: 4px solid black;
+  width: 30vw;
+  margin: auto;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 400px){
+#h{
+  font-size: 3rem;
+  padding: 10px;
+}
+#span{
+  font-size: 3rem;
+}
+#c{
+  font-size: 6rem;
+}
+#p{
+  margin: 10px auto;
+}
+
+#re div{
+  border: 2px solid black;
+  width: 30vw;
+  font-size: 1rem;
+  
+}}

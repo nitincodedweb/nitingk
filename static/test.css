@@ -1,0 +1,55 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+h1{
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 15px;
+  
+}
+#te{
+  text-align: center;
+  width: 80%;
+  margin: 50px auto;
+  padding: 15px;
+  box-shadow: 0px 0px 2px black;
+  
+  border-radius: 5px;
+}
+#te form{
+  font-size: 2rem;
+  text-align: center;
+  
+}
+select{
+  display: block;
+  margin:  15px auto;
+  width: 50%;
+  border-radius: 5px;
+  
+}
+button {
+  width: 50%;
+  margin:  20px auto;
+  border-radius: 5px;
+  padding: 3px;
+}
+@media only screen and (max-width: 400px){
+  h1{
+    font-size: 2rem
+  }
+  #te form {
+    font-size: 1rem;
+  }
+  select{
+    width: 75%;
+  }
+  button {
+    width: 75%;
+  }
+  #oo{
+    font-size: 0.5rem;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>acount</title>
+     <link rel="stylesheet" href="/static/acount.css">
+
+</head>
+
+<body>
+ <div id="i">
+     <h1>Account</h1>
+     <hr />
+     <div id="f">
+       <a href="/signup">sign up</a>
+       <a href="/signin">sign in</a>
+     </div>
+   <form action="/signin" method="post">
+     <input type="text" name="user" id="user" placeholder="Enter your username" required/>
+     <input type="password" name="pass" id="pass" placeholder="Enter your password" required/>
+     <button type="submit">submit</button>
+ </div>
+ </form>
+
+ <footer>
+   copyright &copy; GK.com
+ </footer>
+ <script src="/static/acount.js"></script>
+</body>
+
+</html>

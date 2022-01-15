@@ -1,0 +1,90 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+h1{
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 10px;
+}
+#n input,button{
+  text-align: center;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+#i input,button{
+  text-align: center;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+#g{
+  display: flex;
+  
+  justify-content: center;
+}
+#f{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: auto;
+
+}
+#f a{
+  color: #ACA7A7;
+  font-weight: bold;
+}
+#f a:hover{
+background: #ACA7A7;
+color: black;
+border-radius: 30px;
+padding: 10px;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  background: black;
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+  color: white;
+}
+#c{
+  display: none;
+}
+form p{
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 400px){
+  form{
+    width: 75%;
+    
+  }
+  form p{
+    font-size: 1.5rem;
+  }
+  #f{
+    width: 40%;
+  }
+  footer {
+    width: 100%;
+    text-align: center;
+    background: black;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
+    color: white;
+  }
+}
