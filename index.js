@@ -1,11 +1,32 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const url = 'mongodb+srv://NitinN:NitinN@cluster0.svkla.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
+mongoose.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log('hello I am connected')
+  })
+  .catch((err) => {
+    console.log(`I am sorry \n ${err}`);
+  })
+
+const nitinSchema = new mongoose.Schema({
+  name: String,
+  num: Number,
+  email: String,
+  sub: String,
+  t: String
+});
+const Nitin = new mongoose.model('Nitin', nitinSchema);
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -71,6 +92,12 @@ app.post('/contact', (req, res) => {
   });
 
   res.render('contact', { n: `${name}`, nu: `${num}`, e: `${email}` });
+  
+  const nitin = new Nitin(req.body);
+  nitin.save((err, nitin)=>{
+    if(err)return console.error(err);
+    console.log(nitin);
+  })
 });
 
 app.get('/app', (req, res) => {
